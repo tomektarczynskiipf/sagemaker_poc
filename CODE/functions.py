@@ -1,6 +1,7 @@
 import boto3
 import io
 import json
+import pandas as pd
 
 def get_aws_account_id():
     """
@@ -73,3 +74,26 @@ def delete_s3_folder(bucket_name, folder_path):
         print(f"Deleted {len(objects_to_delete)} objects from s3://{bucket_name}/{folder_path}")
     else:
         print(f"No objects found in s3://{bucket_name}/{folder_path}")
+
+def read_csv_from_s3(bucket_name, s3_key):
+    """
+    Read a CSV file from S3 and return a DataFrame.
+
+    Parameters:
+    - bucket_name: str, the S3 bucket name
+    - s3_key: str, the S3 key (path) to the CSV file
+
+    Returns:
+    - pd.DataFrame, the DataFrame read from the CSV file
+    """
+    # Create S3 client
+    s3_client = boto3.client('s3')
+    
+    # Get the CSV file from S3
+    response = s3_client.get_object(Bucket=bucket_name, Key=s3_key)
+    csv_content = response['Body'].read().decode('utf-8')
+    
+    # Read the CSV content into a DataFrame
+    df = pd.read_csv(io.StringIO(csv_content))
+    
+    return df
