@@ -1,2 +1,7 @@
 .ipynb_checkpoints/Description-checkpoint.txt
 .ipynb_checkpoints/.gitignore-checkpoint
+CODE/.ipynb_checkpoints/functions-checkpoint.py
+CODE/.ipynb_checkpoints/99_clean_everything-checkpoint.ipynb
+CODE/.ipynb_checkpoints/01_prepare_data-checkpoint.ipynb
+CODE/.ipynb_checkpoints/00_create_settings-checkpoint.ipynb
+CODE/__pycache__/functions.cpython-310.pyc
