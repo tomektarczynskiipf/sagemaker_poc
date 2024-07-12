@@ -7,3 +7,5 @@ CODE/.ipynb_checkpoints/00_create_settings-checkpoint.ipynb
 CODE/__pycache__/functions.cpython-310.pyc
 CODE/.ipynb_checkpoints/03_experiment-checkpoint.ipynb
 CODE/.ipynb_checkpoints/02_data_preprocessing-checkpoint.ipynb
+CODE/.ipynb_checkpoints/05_batch_inference-checkpoint.ipynb
+CODE/.ipynb_checkpoints/04_training_job-checkpoint.ipynb
