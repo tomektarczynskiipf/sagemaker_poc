@@ -30,6 +30,8 @@ def output_fn(prediction, accept='application/json'):
     if accept == 'application/json':
         return json.dumps(prediction.tolist())
     elif accept == 'text/csv':
-        return pd.DataFrame(prediction).to_csv(index=False)
+        result = pd.DataFrame(prediction)
+        result.columns = ["prediction"]
+        return result.to_csv(index=False)
     else:
         raise ValueError(f"Unsupported accept type: {accept}")

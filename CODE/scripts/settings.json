@@ -22,6 +22,12 @@
         "preprocessing_step_name": "01-churn-preprocessing",
         "training_step_name": "01-churn-training",
         "modelcreate_step_name": "01-churn-model-create",
-        "transformer_step_name": "01-churn-transformer"
+        "transformer_step_name": "01-churn-transformer",
+        "verifypredictions_step_name": "01-churn-verifypredictions",
+
+        "reference_inference_train": "s3://sagemaker-bucket-ds/01-churn/v1/output/base_pred/train.csv",
+        "max_diff_pred_train_accept": "0.0002",
+
+        "verifypredictions_output_default": "/opt/ml/processing/output/"
     }
 }
