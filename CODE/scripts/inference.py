@@ -21,7 +21,7 @@ def input_fn(input_data, content_type):
 def predict_fn(input_data, model):
     # Ensure the input data is in the correct format
     if isinstance(input_data, pd.DataFrame):
-        predictions = model.predict_proba(input_data)
+        predictions = model.predict_proba(input_data)[:, 1]
     else:
         raise ValueError("Input data should be a pandas DataFrame")
     return predictions

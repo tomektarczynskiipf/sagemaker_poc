@@ -2,7 +2,7 @@
     "211125740051": {
         "project_name": "01-churn",
         "bucket_name": "sagemaker-bucket-ds",
-        "project_path_s3": "01-churn/v1",
+        "project_path_s3": "01-churn/v1-prod",
         
         "mlflow_arn": "arn:aws:sagemaker:eu-west-1:211125740051:mlflow-tracking-server/Sample-server",
         "mlflow_experiment_name": "01-churn",

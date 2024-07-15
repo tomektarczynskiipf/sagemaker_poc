@@ -68,4 +68,4 @@ if __name__ == '__main__':
     valid.to_csv(valid_path, index=False, float_format='%.5f')
 
     inference_train_path = os.path.join(settings["preprocessing_output_inference_train"], "inference_train.csv")
-    valid.to_csv(inference_train_path, index=False, float_format='%.5f')
+    inference_train.to_csv(inference_train_path, index=False, float_format='%.5f')
