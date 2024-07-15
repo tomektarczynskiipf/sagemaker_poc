@@ -31,12 +31,12 @@ if __name__ == '__main__':
     with mlflow.start_run(run_name = os.environ['mlflow_final_model_name']):
         mlflow.set_tag("training_job_name", os.environ['TRAINING_JOB_NAME'])
         
-        clf = LogisticRegression(max_iter=100)
+        clf = LogisticRegression(max_iter=1000, random_state=42)
         clf = clf.fit(train_X, train_y)
     
         mlflow.sklearn.log_model(clf, "model")
 
-        model_path = os.path.join(model_dir, "model.pkl")
+        model_path = os.path.join(model_dir, "model.joblib")
         joblib.dump(clf, model_path)
     
 
