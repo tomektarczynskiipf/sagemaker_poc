@@ -1,0 +1,27 @@
+{
+    "211125740051": {
+        "project_name": "01-churn",
+        "bucket_name": "sagemaker-bucket-ds",
+        "project_path_s3": "01-churn/v1",
+        
+        "mlflow_arn": "arn:aws:sagemaker:eu-west-1:211125740051:mlflow-tracking-server/Sample-server",
+        "mlflow_experiment_name": "01-churn",
+        "mlflow_model_name": "01-churn",
+        
+        "preprocessing_job_name": "01-churn-preprocessing",
+        "training_job_name": "01-churn",
+        "transform_job_name": "01-churn",
+        
+        
+        "preprocessing_output_train": "/opt/ml/processing/output/train",
+        "preprocessing_output_valid": "/opt/ml/processing/output/valid",
+        "preprocessing_output_test": "/opt/ml/processing/output/test",
+        "preprocessing_output_inference_train": "/opt/ml/processing/output/inference_train",
+
+        
+        "preprocessing_step_name": "01-churn-preprocessing",
+        "training_step_name": "01-churn-training",
+        "modelcreate_step_name": "01-churn-model-create",
+        "transformer_step_name": "01-churn-transformer"
+    }
+}
